@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>spin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class='container'>
+   <div style="text-align: center ;">
+    <h2> This wheel spins after <span id="timer">10</span> seconds </h2>
+    <p> place bet before time runs out </p>
+   </div>
+    <div class="top-circle">
+      <canvas id="myChart" width="400" height="400"></canvas>
+      
+      <div class="content-circle">
+          <div class="text">
+            Start
+          </div>
+          <div class="total-bet-container">
+            $ <span>0.00</span>
+          </div>
+          <button id="place-bet" onclick="placeBet()">Place bet</button>
+        </div>
+    </div>
+
+    <!-- betters` -->
+    <div class="betters">
+      <div class="i-bet">
+        Caleb
+        & <span class="price">100</span>
+      </div>
+      <div class="i-bet">
+        Lovina
+        $ <span class="price">10</span>
+      </div>
+      <div class="i-bet">
+        Peace
+        $ <span class="price">10</span>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
