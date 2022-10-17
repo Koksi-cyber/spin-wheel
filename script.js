@@ -6,11 +6,17 @@ const betBtn = document.querySelector('#place-bet');
 const randWinner = Math.floor(Math.random() * allBettersPrice.length);
 const chart = document.querySelector("#myChart");
 
-arraysOfPrice = [];
+arraysOfPrice = [120, 200, 400];
 const time = 10;
 let currentTime = time;
 let ranDeg = 0;
 
+
+function handleWin(actualDeg) {
+  let zeroAve = Math.ceil(360 / arraysOfPrice.length);
+  const winningSymbolNr = Math.ceil(actualDeg / zeroAve);
+  console.log("The winner is " + winningSymbolNr)
+}
 
 //array of all betters price
 allBettersPrice.forEach(element => {
@@ -105,10 +111,4 @@ function bet() {
   document.querySelector(".betters").append(ibetDiv);
 
   allBettersPrice.push(userInput);
-}
-
-
-function handleWin(actualDeg) {
-  //
-  console.log("The winner is " + randWinner)
 }
